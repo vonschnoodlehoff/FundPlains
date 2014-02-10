@@ -1,0 +1,2 @@
+class FundPerformanceController < ApplicationController
+end
