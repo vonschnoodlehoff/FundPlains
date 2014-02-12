@@ -1,0 +1,47 @@
+
+<h1>Testing</h1>
+<div class="datagrid"><table>
+
+  <thead><tr><th>Fund Name</th>
+    <th>Unit Price</th>
+    <th>Total Capitalisation</th>
+    <th>1 Month Performance</th>
+    <th>3 Month Performance</th>
+    <th>6 Month Performance</th>
+    <th>12 Month Performance</th>
+    <th>Time Active</th>
+    <th>Member Count</th>
+  </tr></thead>
+  <tfoot>
+  <tr>
+    <td colspan="1">
+      <div id="paging">
+        <ul>
+          <li><a href="#"><span>Previous</span></a></li>
+          <li><a href="#" class="active"><span>1</span></a></li>
+          <li><a href="#"><span>2</span></a></li>
+          <li><a href="#"><span>3</span></a></li>
+          <li><a href="#"><span>4</span></a></li>
+          <li><a href="#"><span>5</span></a></li>
+          <li><a href="#"><span>Next</span></a></li>
+        </ul>
+      </div>
+  </tr>
+  </tfoot>
+
+  <tbody>
+  <% @fundlist.each do |fundlist| %>
+  <tr>
+    <td><%= fundlist.FundName %></td>
+    <td><%= fundlist.UnitPrice %></td>
+    <td><%= fundlist.TotalCapitalisation %></td>
+    <td><%= fundlist.Performance1Month %></td>
+    <td><%= fundlist.Performance3Month %></td>
+    <td><%= fundlist.Performance6Month %></td>
+    <td><%= fundlist.Performance12Month %></td>
+    <td><%= fundlist.TimeActive %></td>
+    <td><%= fundlist.MemberCount %></td>
+  </tr>
+  <% end %>
+  </tbody>
+</table></div>
