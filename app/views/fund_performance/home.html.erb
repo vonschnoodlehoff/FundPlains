@@ -1,8 +1,11 @@
 
-<h1>Testing</h1>
-<div class="datagrid"><table>
+<div class="datagrid">
+  <div id="tablehead">Fund Performance</div>
+  <table>
 
-  <thead><tr><th>Fund Name</th>
+  <thead><tr>
+    <th>Fund ID</th>
+    <th>Fund Name</th>
     <th>Unit Price</th>
     <th>Total Capitalisation</th>
     <th>1 Month Performance</th>
@@ -14,7 +17,7 @@
   </tr></thead>
   <tfoot>
   <tr>
-    <td colspan="1">
+    <td colspan="3">
       <div id="paging">
         <ul>
           <li><a href="#"><span>Previous</span></a></li>
@@ -32,7 +35,8 @@
   <tbody>
   <% @fundlist.each do |fundlist| %>
   <tr>
-    <td><%= fundlist.FundName %></td>
+    <td><%= fundlist.id %></td>
+    <td><li><a href="#" class="intablelink"><span><%= fundlist.FundName %></span></a></li></td>
     <td><%= fundlist.UnitPrice %></td>
     <td><%= fundlist.TotalCapitalisation %></td>
     <td><%= fundlist.Performance1Month %></td>

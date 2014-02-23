@@ -17,17 +17,14 @@
 </head>
 
 <body>
-<%= render 'layouts/header' %>
-
-<div id="wrapper">
-  <div id="welcome" class="wrapper-style1">
-    <div class="title">
-  </div>
-
+<div id = "container">
+    <%= render 'layouts/header' %>
+    <div id="main">
+        <%= yield %>
+    </div>
+    <%= render 'layouts/footer' %>'
 </div>
 
-<%= yield %>
-<%= render 'layouts/footer' %>
 </body>
 
 </html>

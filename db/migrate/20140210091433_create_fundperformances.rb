@@ -1,6 +1,7 @@
 class CreateFundperformances < ActiveRecord::Migration
   def change
     create_table :fundperformances do |t|
+      t.primary_key :ID
       t.string :FundName
       t.decimal :UnitPrice
       t.decimal :TotalCapitalisation

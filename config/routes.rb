@@ -2,6 +2,7 @@ FundPlains::Application.routes.draw do
 
   root 'fund_performance#home'
   match 'fund_performance/home',    to: 'fundperformance#home',    via: 'get'
+  # match 'funds/:id', to: 'funds#profile', via: get
 
 
   # The priority is based upon order of creation: first created -> highest priority.
